@@ -1,0 +1,77 @@
+
+.bg-second{
+    background-color: #ff9a00;
+}
+
+.bg-trama{
+    background-color: #ffe6bf;
+}
+
+.bg-tramaSecond{
+    background-color: #fff8eecf;
+}
+
+.font-size-25{
+    font-size: 25px;
+}
+.font-size-30{
+    font-size: 30px;
+}
+.font-size-35{
+    font-size: 35px;
+}
+.font-size-40{
+    font-size: 40px;
+}
+.font-size-45{
+    font-size: 45px;
+}
+.font-size-50{
+    font-size: 50px;
+}
+
+.font-size-100{
+    font-size: 100px;
+}
+
+
+.shadow-primary{
+    box-shadow: 8px 8px 15px rgba(219, 75, 26, .5) !important;
+
+}
+
+.red-danger{
+    background-color: rgb(182, 0, 0);
+}
+
+.text-red-danger{
+    color: rgb(182, 0, 0) !important;
+}
+
+.border-red-danger{
+    border-color: rgb(182, 0, 0);
+}
+
+.text-secundary{
+    color:#22cff5;
+}
+
+.enrolmentProcess-mark{
+    background-color: #004e25;
+    border:none !important;
+}
+.enrolmentProcess-mark h5{
+    color: rgb(142 175 143);
+}
+.enrolmentProcess-mark a{
+    pointer-events: none;
+    color:rgb(142 175 143) !important;
+    /* display: none; */
+}
+
+.enrolmentProcess-mark .badge-soft-danger {
+
+    color:#45cb85 !important;
+    background-color: rgba(69, 203, 133, 0.18);
+}
+
