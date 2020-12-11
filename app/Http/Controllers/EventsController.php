@@ -86,7 +86,7 @@ class EventsController extends Controller
         $resultado=event::where('id','=',$id)->update($datosEvento); 
         // dd($datosEvento);      
         return response()->json($resultado);
-        dd($resultado);
+        
 
     }
 

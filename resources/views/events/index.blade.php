@@ -81,8 +81,14 @@
                 Miboton: {
                     text: "Create Event",
                     click: function() {
-                        //alert("Hola mundo");                            
+                        //alert("Hola mundo");
+                        limpiarFormulario();  
+                        $('#btnAgregar').show(false);
+                        $('#btnModificar').hide(true);
+                        $('#btnEliminar').hide(true);                          
                         $('#eventModal').modal('toggle');
+                        
+            
                     }
                 }
             }, //fin boton personalizable (, borrar si quita el bloque)            
@@ -110,25 +116,24 @@
 
                 if ($clicDay < $nowToday){
                     // alert("No puede generar un evento pasado de la fecha actual");
-                    toastr["error"]("No puede crear un evento en el pasado")
-
-                            toastr.options = {
-                            "closeButton": true,
-                            "debug": false,
-                            "newestOnTop": true,
-                            "progressBar": true,
-                            "positionClass": "toast-top-right",
-                            "preventDuplicates": true,
-                            "onclick": null,
-                            "showDuration": "300",
-                            "hideDuration": "1000",
-                            "timeOut": "2000",
-                            "extendedTimeOut": "1000",
-                            "showEasing": "swing",
-                            "hideEasing": "linear",
-                            "showMethod": "fadeIn",
-                            "hideMethod": "fadeOut"
-                            }
+                    toastr["error"](" No puede crear un evento en el pasado", $clicDay )
+                    toastr.options = {
+                                    "closeButton": true,
+                                    "debug": false,
+                                    "newestOnTop": true,
+                                    "progressBar": true,
+                                    "positionClass": "toast-bottom-right",
+                                    "preventDuplicates": true,
+                                    "onclick": null,
+                                    "showDuration": "300",
+                                    "hideDuration": "1000",
+                                    "timeOut": "2000",
+                                    "extendedTimeOut": "1000",
+                                    "showEasing": "swing",
+                                    "hideEasing": "linear",
+                                    "showMethod": "fadeIn",
+                                    "hideMethod": "fadeOut"
+                                    }          
                     //$('#alertNotNewEvent').html("No puede generar un evento pasado de la fecha actual");  
                 }else{
                     $('#eventModal').modal();
@@ -153,7 +158,8 @@
                 console.log(info.event.backgroundColor);
                 console.log(info.event.extendedProps.descripcion);
                 console.log(info.event.extendedProps.nameStudent);
-                console.log(info.event.extendedProps.nameTutor);              
+                console.log(info.event.extendedProps.nameTutor);  
+                        
             },           
 
             //funcion click en el evento eventDblClick
@@ -240,7 +246,8 @@
 
                 objEvento = recolectarDatosGUI("PATCH");
                 EnviarInformacion('/' + $('#txtID').val(), objEvento, true);
-
+                
+                
                
 
             },
@@ -274,25 +281,28 @@
         $('#btnEliminar').click(function() {
             objEvento = recolectarDatosGUI("DELETE");
             EnviarInformacion('/' + $('#txtID').val(), objEvento);
-            toastr["warning"]("Event Deleted Success")
-
-toastr.options = {
-  "closeButton": true,
-  "debug": false,
-  "newestOnTop": true,
-  "progressBar": true,
-  "positionClass": "toast-top-right",
-  "preventDuplicates": true,
-  "onclick": null,
-  "showDuration": "300",
-  "hideDuration": "1000",
-  "timeOut": "2000",
-  "extendedTimeOut": "1000",
-  "showEasing": "swing",
-  "hideEasing": "linear",
-  "showMethod": "fadeIn",
-  "hideMethod": "fadeOut"
-}
+            $id = $('#txtID').val();
+            $title = $('#txtTitulo').val();
+            $hora = $('#txtHora').val();
+            $student = $('#nameStudent').val();
+            toastr["error"]("Event successfully removed.","Event: " +$id + " | " + $title + " | "+$student+ " | "+$hora)
+                    toastr.options = {
+                    "closeButton": true,
+                    "debug": false,
+                    "newestOnTop": true,
+                    "progressBar": true,
+                    "positionClass": "toast-bottom-right",
+                    "preventDuplicates": true,
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "2000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                    }
 
         });
 
@@ -335,14 +345,14 @@ toastr.options = {
                         $('#eventModal').modal('toggle'); // hace que se desaparezca el modal
                         // alert(msg);
                         if(msg ==1){
-                            toastr["success"]("Update Success")
+                            toastr["success"]("Event  successfully updated.")
 
                                     toastr.options = {
                                     "closeButton": true,
                                     "debug": false,
                                     "newestOnTop": true,
                                     "progressBar": true,
-                                    "positionClass": "toast-top-right",
+                                    "positionClass": "toast-bottom-right",
                                     "preventDuplicates": true,
                                     "onclick": null,
                                     "showDuration": "300",
@@ -363,7 +373,24 @@ toastr.options = {
 
                 },
                 error: function() {
-                    alert("Hay un error");
+                    toastr["error"]("All fields are required.")
+                    toastr.options = {
+                    "closeButton": true,
+                    "debug": false,
+                    "newestOnTop": true,
+                    "progressBar": true,
+                    "positionClass": "toast-bottom-right",
+                    "preventDuplicates": true,
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "2000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                    }
                 }
 
             });
@@ -427,10 +454,10 @@ toastr.options = {
                         <label for="">Title Event</label>
                         <div class="input-group mb-2">
                             <div class="input-group-prepend">
-                                <div class="input-group-text"><i class="far fa-calendar-check text-warning"></i></i>
+                                <div class="input-group-text"><i class="far fa-calendar-check text-warning" ></i></i>
                                 </div>
                             </div>
-                            <input class="form-control" type="text" name="txtTitulo" id="txtTitulo">
+                            <input class="form-control" type="text" name="txtTitulo" id="txtTitulo" required>
                         </div>
                     </div>
 
@@ -457,9 +484,10 @@ toastr.options = {
                                  
                                  
                             </select> --}}
-                            <select id="nameStudent" class="form-control js-custom-select" name="nameStudent" data-hs-select2-options='{
+                            <select id="nameStudent" class="form-control js-custom-select" data-hs-select2-options='{
                                 "placeholder": "Select Student"                                
                                     }'>
+                                    <option value="">Select Student</option>
                                 @foreach ($enquirys as $enquiry)
                                 
                                    <option value="{{$student = $enquiry->first_name }}">{{ $student }}</option>
@@ -474,7 +502,7 @@ toastr.options = {
                         <label for="">Tutor</label>
                         <div class="input-group mb-2">
                             
-                            <select class="form-control" id="nameTutor" >
+                            <select class="form-control js-custom-select" id="nameTutor">
                                 <option>Tutor</option>
                                 <option>Pepeito</option>
                                 <option>Pedro</option>
