@@ -37,7 +37,7 @@ var options= {
       ,
   }
   ,
-  colors: ['#db4b1a'],
+  colors: ['#366db1'],
 }
 
 ;
@@ -133,7 +133,7 @@ var options= {
       categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
   }
   ,
-  colors: ['#db4b1a',
+  colors: ['#366db1',
   '#eeb902',
   '#5fd195'],
   markers: {
@@ -174,7 +174,7 @@ var options= {
       curve: 'smooth', width: 3
   }
   ,
-  colors: ['#db4b1a'],
+  colors: ['#366db1'],
 }
 
 ;
@@ -267,7 +267,7 @@ var options= {
       size: 0
   }
   ,
-  colors: ['#db4b1a',
+  colors: ['#366db1',
   '#5fd195',
   '#eeb902'],
   xaxis: {

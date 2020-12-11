@@ -121,7 +121,7 @@ var options = {
       enabled: false
     }
   },
-  colors: ['#45cb85', '#db4b1a'],
+  colors: ['#45cb85', '#366db1'],
   dataLabels: {
     enabled: false
   },
@@ -186,7 +186,7 @@ var options = {
   xaxis: {
     categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
   },
-  colors: ['#eef3f7', '#ced6f9', '#db4b1a'],
+  colors: ['#eef3f7', '#ced6f9', '#366db1'],
   fill: {
     opacity: 1
   }
@@ -211,7 +211,7 @@ var options = {
   legend: {
     show: false
   },
-  colors: ['#db4b1a', '#45cb85', '#eeb902']
+  colors: ['#366db1', '#45cb85', '#eeb902']
 };
 var chart = new ApexCharts(document.querySelector("#donut-chart"), options);
 chart.render(); // Scatter  chart
@@ -235,7 +235,7 @@ var options = {
       type: 'xy'
     }
   },
-  colors: ['#db4b1a', '#45cb85'],
+  colors: ['#366db1', '#45cb85'],
   xaxis: {
     tickAmount: 10
   },
@@ -282,7 +282,7 @@ $('#usa-vectormap').vectorMap({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/michael/Sites/Qovex/resources/js/pages/dashboard.init.js */"./resources/js/pages/dashboard.init.js");
+module.exports = __webpack_require__(/*! /Users/michael/Sites/educate/resources/js/pages/dashboard.init.js */"./resources/js/pages/dashboard.init.js");
 
 
 /***/ })

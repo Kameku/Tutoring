@@ -130,7 +130,7 @@ var options = {
       }
     }
   },
-  colors: ['#db4b1a']
+  colors: ['#366db1']
 };
 var chart = new ApexCharts(document.querySelector("#radial-chart-1"), options);
 chart.render(); // Radial chart 2
@@ -216,7 +216,7 @@ var options = {
   xaxis: {
     categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
   },
-  colors: ['#db4b1a', '#eeb902', '#5fd195'],
+  colors: ['#366db1', '#eeb902', '#5fd195'],
   markers: {
     size: 0
   }
@@ -246,7 +246,7 @@ var options = {
     curve: 'smooth',
     width: 3
   },
-  colors: ['#db4b1a']
+  colors: ['#366db1']
 };
 var chart = new ApexCharts(document.querySelector("#sales-report-chart"), options);
 chart.render(); // bar chart
@@ -316,7 +316,7 @@ var options = {
   markers: {
     size: 0
   },
-  colors: ['#db4b1a', '#5fd195', '#eeb902'],
+  colors: ['#366db1', '#5fd195', '#eeb902'],
   xaxis: {
     categories: ['2014', '2015', '2016', '2017', '2018', '2019']
   }
@@ -333,7 +333,7 @@ chart.render();
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/michael/Sites/Qovex/resources/js/pages/dashboard-2.init.js */"./resources/js/pages/dashboard-2.init.js");
+module.exports = __webpack_require__(/*! /Users/michael/Sites/educate/resources/js/pages/dashboard-2.init.js */"./resources/js/pages/dashboard-2.init.js");
 
 
 /***/ })

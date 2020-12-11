@@ -1,16 +1,26 @@
-
+.bg-blue-color{
+    background-color: #366db1;
+}
 .bg-second{
     background-color: #ff9a00;
 }
 
 .bg-trama{
-    background-color: #ffe6bf;
+    background-color: #a8cfff;
 }
 
 .bg-tramaSecond{
-    background-color: #fff8eecf;
+    background-color: #ffffff;
 }
-
+.font-size-15{
+    font-size: 15px;
+}
+.font-size-18{
+    font-size: 18px;
+}
+.font-size-20{
+    font-size: 20px;
+}
 .font-size-25{
     font-size: 25px;
 }
@@ -40,6 +50,10 @@
 
 }
 
+.text-blue-color{
+   color: #366db1;
+}
+
 .red-danger{
     background-color: rgb(182, 0, 0);
 }
@@ -57,7 +71,7 @@
 }
 
 .enrolmentProcess-mark{
-    background-color: #004e25;
+    background-color: #cce8da;
     border:none !important;
 }
 .enrolmentProcess-mark h5{
@@ -69,10 +83,37 @@
     /* display: none; */
 }
 
+.enrolmentProcess-mark button{
+    color:rgb(142 175 143) !important;
+}
+
 .enrolmentProcess-mark .badge-soft-danger {
 
     color:#45cb85 !important;
     background-color: rgba(69, 203, 133, 0.18);
 }
 
-/* estilos full callendar */
+.enrolmentProcess-mark #complete{
+
+        display: none;
+}
+.enrolmentProcess-mark #pending{
+
+    display: block !important;
+}
+
+#pending{
+    display: none;
+}
+
+#pending button{
+    color:rgb(254, 193, 184) !important;
+}
+
+.packageSelectHide{
+    display: none !important;
+}
+
+/* .margin-top-validate{
+    margin-top:-4.25rem !important;
+} */

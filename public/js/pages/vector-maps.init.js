@@ -120,7 +120,7 @@ File: Vector maps
       markerStyle: {
         initial: {
           r: 9,
-          'fill': '#db4b1a',
+          'fill': '#366db1',
           'fill-opacity': 0.9,
           'stroke': '#fff',
           'stroke-width': 7,
@@ -203,7 +203,7 @@ File: Vector maps
       backgroundColor: 'transparent',
       regionStyle: {
         initial: {
-          fill: '#db4b1a'
+          fill: '#366db1'
         }
       }
     });
@@ -212,7 +212,7 @@ File: Vector maps
       backgroundColor: 'transparent',
       regionStyle: {
         initial: {
-          fill: '#db4b1a'
+          fill: '#366db1'
         }
       }
     });
@@ -221,7 +221,7 @@ File: Vector maps
       backgroundColor: 'transparent',
       regionStyle: {
         initial: {
-          fill: '#db4b1a'
+          fill: '#366db1'
         }
       }
     });
@@ -230,7 +230,7 @@ File: Vector maps
       backgroundColor: 'transparent',
       regionStyle: {
         initial: {
-          fill: '#db4b1a'
+          fill: '#366db1'
         }
       }
     });
@@ -239,7 +239,7 @@ File: Vector maps
       backgroundColor: 'transparent',
       regionStyle: {
         initial: {
-          fill: '#db4b1a'
+          fill: '#366db1'
         }
       }
     });
@@ -248,7 +248,7 @@ File: Vector maps
       backgroundColor: 'transparent',
       regionStyle: {
         initial: {
-          fill: '#db4b1a'
+          fill: '#366db1'
         }
       }
     });
@@ -270,7 +270,7 @@ function ($) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/michael/Sites/Qovex/resources/js/pages/vector-maps.init.js */"./resources/js/pages/vector-maps.init.js");
+module.exports = __webpack_require__(/*! /Users/michael/Sites/educate/resources/js/pages/vector-maps.init.js */"./resources/js/pages/vector-maps.init.js");
 
 
 /***/ })

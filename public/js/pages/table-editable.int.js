@@ -197,7 +197,7 @@ File: table editable
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/michael/Sites/Qovex/resources/js/pages/table-editable.int.js */"./resources/js/pages/table-editable.int.js");
+module.exports = __webpack_require__(/*! /Users/michael/Sites/educate/resources/js/pages/table-editable.int.js */"./resources/js/pages/table-editable.int.js");
 
 
 /***/ })

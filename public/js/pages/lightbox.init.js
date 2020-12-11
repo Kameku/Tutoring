@@ -242,7 +242,7 @@ File: Lighbox
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/michael/Sites/Qovex/resources/js/pages/lightbox.init.js */"./resources/js/pages/lightbox.init.js");
+module.exports = __webpack_require__(/*! /Users/michael/Sites/educate/resources/js/pages/lightbox.init.js */"./resources/js/pages/lightbox.init.js");
 
 
 /***/ })

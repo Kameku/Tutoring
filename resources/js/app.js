@@ -201,5 +201,7 @@ File: Main Js File
 
     init();
 
+    toastr.info("hola");
+
 })(jQuery)
 

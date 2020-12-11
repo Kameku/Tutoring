@@ -63,16 +63,16 @@ File: Chartjs chart
                     fill: true,
                     lineTension: 0.5,
                     backgroundColor: "rgba(59, 93, 231, 0.2)",
-                    borderColor: "#db4b1a",
+                    borderColor: "#366db1",
                     borderCapStyle: 'butt',
                     borderDash: [],
                     borderDashOffset: 0.0,
                     borderJoinStyle: 'miter',
-                    pointBorderColor: "#db4b1a",
+                    pointBorderColor: "#366db1",
                     pointBackgroundColor: "#fff",
                     pointBorderWidth: 1,
                     pointHoverRadius: 5,
-                    pointHoverBackgroundColor: "#db4b1a",
+                    pointHoverBackgroundColor: "#366db1",
                     pointHoverBorderColor: "#fff",
                     pointHoverBorderWidth: 2,
                     pointRadius: 1,
@@ -127,11 +127,11 @@ File: Chartjs chart
                 {
                     data: [300, 210],
                     backgroundColor: [
-                        "#db4b1a",
+                        "#366db1",
                         "#ebeff2"
                     ],
                     hoverBackgroundColor: [
-                        "#db4b1a",
+                        "#366db1",
                         "#ebeff2"
                     ],
                     hoverBorderColor: "#fff"
@@ -229,7 +229,7 @@ File: Chartjs chart
                     "#ff715b",
                     "#45cb85",
                     "#eeb902",
-                    "#db4b1a"
+                    "#366db1"
                 ],
                 label: 'My dataset', // for legend
                 hoverBorderColor: "#fff"

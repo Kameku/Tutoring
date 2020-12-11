@@ -63,7 +63,7 @@ html, body {
 
 .website-logo .logo {
     display: inline-block;
-    background-image: url("../images/site-icon.png");
+    background-image: url("../images/logo-light.svg");
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -90,7 +90,7 @@ html, body {
 
 .website-logo-inside .logo {
     display: inline-block;
-    background-image: url("../images/site-icon.png");
+    background-image: url("../images/logo-light.svg");
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -218,7 +218,7 @@ html, body {
 
 .img-holder .info-holder img {
     width: 100%;
-    max-width: 550px;
+    max-width: 378px;
 }
 
 .img-holder .info-holder img.md-size {
@@ -1385,7 +1385,7 @@ input.sm-content {
 
 .form-body.without-side .website-logo {
     top: 70px;
-    left: 43%;
+    left: 50%;
     margin-left: -50px;
     right: initial;
     bottom: initial;
@@ -1432,7 +1432,7 @@ input.sm-content {
 
 .form-body.without-side .img-holder .info-holder img {
     display: none;
-    max-width: 734px;
+    max-width: 534px;
     -webkit-animation: zoom-in-img 50s linear 0s infinite;
     -moz-animation: zoom-in-img 50s linear 0s infinite;
     -ms-animation: zoom-in-img 50s linear 0s infinite;
@@ -1464,7 +1464,7 @@ input.sm-content {
 }
 
 .form-body.without-side .form-content .form-items {
-    padding: 55px 40px;
+    padding: 35px 30px;
     border-radius: 10px;
     background-color: #fff;
     -webkit-box-shadow: 0 6px 15px rgba(0, 0, 0, 0.16);

@@ -112,7 +112,7 @@ var options = {
       show: false
     }
   },
-  colors: ['#db4b1a', '#eeb902'],
+  colors: ['#366db1', '#eeb902'],
   dataLabels: {
     enabled: true
   },
@@ -191,7 +191,7 @@ var options = {
       show: false
     }
   },
-  colors: ['#db4b1a', '#ff715b', '#45cb85'],
+  colors: ['#366db1', '#ff715b', '#45cb85'],
   dataLabels: {
     enabled: false
   },
@@ -320,7 +320,7 @@ var options = {
     name: 'Free Cash Flow',
     data: [37, 42, 38, 26, 47, 50, 54, 55, 43]
   }],
-  colors: ['#45cb85', '#db4b1a', '#eeb902'],
+  colors: ['#45cb85', '#366db1', '#eeb902'],
   xaxis: {
     categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct']
   },
@@ -377,7 +377,7 @@ var options = {
     name: 'Inflation',
     data: [2.5, 3.2, 5.0, 10.1, 4.2, 3.8, 3, 2.4, 4.0, 1.2, 3.5, 0.8]
   }],
-  colors: ['#db4b1a'],
+  colors: ['#366db1'],
   grid: {
     borderColor: '#f1f1f1'
   },
@@ -497,7 +497,7 @@ var options = {
       columnWidth: '50%'
     }
   },
-  colors: ['#45cb85', '#eeb902', '#db4b1a'],
+  colors: ['#45cb85', '#eeb902', '#366db1'],
   series: [{
     name: 'Team A',
     type: 'column',
@@ -581,7 +581,7 @@ var options = {
   },
   series: [44, 55, 67, 83],
   labels: ['Computer', 'Tablet', 'Laptop', 'Mobile'],
-  colors: ['#db4b1a', '#45cb85', '#eeb902', '#ff715b']
+  colors: ['#366db1', '#45cb85', '#eeb902', '#ff715b']
 };
 var chart = new ApexCharts(document.querySelector("#radial_chart"), options);
 chart.render(); // pie chart
@@ -593,7 +593,7 @@ var options = {
   },
   series: [44, 55, 41, 17, 15],
   labels: ["Series 1", "Series 2", "Series 3", "Series 4", "Series 5"],
-  colors: ["#45cb85", "#db4b1a", "#ff715b", "#0caadc", "#eeb902"],
+  colors: ["#45cb85", "#366db1", "#ff715b", "#0caadc", "#eeb902"],
   legend: {
     show: true,
     position: 'bottom',
@@ -625,7 +625,7 @@ var options = {
   },
   series: [44, 55, 41, 17, 15],
   labels: ["Series 1", "Series 2", "Series 3", "Series 4", "Series 5"],
-  colors: ["#45cb85", "#db4b1a", "#ff715b", "#0caadc", "#eeb902"],
+  colors: ["#45cb85", "#366db1", "#ff715b", "#0caadc", "#eeb902"],
   legend: {
     show: true,
     position: 'bottom',
@@ -725,13 +725,13 @@ chart.render();
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/michael/Sites/Qovex/resources/js/pages/apexcharts.init.js */"./resources/js/pages/apexcharts.init.js");
-__webpack_require__(/*! /Users/michael/Sites/Qovex/resources/scss/bootstrap.scss */"./resources/scss/bootstrap.scss");
-__webpack_require__(/*! /Users/michael/Sites/Qovex/resources/scss/bootstrap-dark.scss */"./resources/scss/bootstrap-dark.scss");
-__webpack_require__(/*! /Users/michael/Sites/Qovex/resources/scss/icons.scss */"./resources/scss/icons.scss");
-__webpack_require__(/*! /Users/michael/Sites/Qovex/resources/scss/app-rtl.scss */"./resources/scss/app-rtl.scss");
-__webpack_require__(/*! /Users/michael/Sites/Qovex/resources/scss/app.scss */"./resources/scss/app.scss");
-module.exports = __webpack_require__(/*! /Users/michael/Sites/Qovex/resources/scss/app-dark.scss */"./resources/scss/app-dark.scss");
+__webpack_require__(/*! /Users/michael/Sites/educate/resources/js/pages/apexcharts.init.js */"./resources/js/pages/apexcharts.init.js");
+__webpack_require__(/*! /Users/michael/Sites/educate/resources/scss/bootstrap.scss */"./resources/scss/bootstrap.scss");
+__webpack_require__(/*! /Users/michael/Sites/educate/resources/scss/bootstrap-dark.scss */"./resources/scss/bootstrap-dark.scss");
+__webpack_require__(/*! /Users/michael/Sites/educate/resources/scss/icons.scss */"./resources/scss/icons.scss");
+__webpack_require__(/*! /Users/michael/Sites/educate/resources/scss/app-rtl.scss */"./resources/scss/app-rtl.scss");
+__webpack_require__(/*! /Users/michael/Sites/educate/resources/scss/app.scss */"./resources/scss/app.scss");
+module.exports = __webpack_require__(/*! /Users/michael/Sites/educate/resources/scss/app-dark.scss */"./resources/scss/app-dark.scss");
 
 
 /***/ })

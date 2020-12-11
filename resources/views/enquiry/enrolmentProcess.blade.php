@@ -22,12 +22,25 @@
                         <h5 class="text-truncate font-size-14 m-0">Student/Parent</h5>
                     </td>
                     <td>
-                        <span class="badge badge-pill badge-soft-success font-size-11 text-center" id="statusEnrolmentProcess-1">{{$enquiry->ep1_state}}</span>
+                        <span class="badge badge-pill badge-soft-danger font-size-11 text-center" id="statusEnrolmentProcess-1">{{$enquiry->ep1_state}}</span>
                     </td>
                     <td>
                         <!-- <a href="#" class="btn btn-sm disabled" data-toggle="tooltip" data-placement="top" title="Send the enrollment form"><i class="bx bx-mail-send font-size-30" ></i></a> -->
                         <!-- <a href="#" class="btn btn-sm disabled" data-toggle="tooltip" data-placement="top" title="fill out the enrollment form manually"><i class="bx bx-food-menu font-size-30" ></i></a> -->
-                        <a href="#" class="btn btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as complete"><i class="bx bx-check-square font-size-30"></i></a>
+                        <form method="POST" class="float-left" id="complete" action="{{route('enquiry.update', ['enquiry' => $enquiry->id])}}">
+                            @csrf
+                            @method('PUT')
+                            <input type="hidden" value="Complete" name='ep1_state'>
+                            <input type="hidden" value="{{$today}}" name="ep1_date">
+                            <button type="submit" class="btn btn-sm text-success" data-toggle="tooltip" data-placement="top" title="Mark as complete"><i class="bx bx-check-square font-size-30"></i></button>
+                        </form>
+                        <form method="POST" class="float-left" id="pending" action="{{route('enquiry.update', ['enquiry' => $enquiry->id])}}">
+                            @csrf
+                            @method('PUT')
+                            <input type="hidden" value="Pending" name='ep1_state'>
+                            <input type="hidden" value="{{$today}}" name="ep1_date">
+                            <button type="submit" class="btn btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as Pending"><i class="bx bx-check-square font-size-30 "></i></button>
+                        </form>
                     </td>
                 </tr>
                 <tr id="itemEnrolmentProcess-2" >
@@ -46,7 +59,20 @@
                     <td>
                         <!-- <a href="#" class="btn btn-sm text-primary" data-toggle="tooltip" data-placement="top" title="Send the enrollment form"><i class="bx bx-mail-send font-size-30" ></i></a>
                         <a href="#" class="btn btn-sm text-primary" data-toggle="tooltip" data-placement="top" title="fill out the enrollment form manually"><i class="bx bx-food-menu font-size-30" ></i></a> -->
-                        <a href="#" class="btn btn-sm text-success" data-toggle="tooltip" data-placement="top" title="Mark as complete"><i class="bx bx-check-square font-size-30"></i></a>
+                        <form method="POST" class="float-left" id="complete" action="{{route('enquiry.update', ['enquiry' => $enquiry->id])}}">
+                            @csrf
+                            @method('PUT')
+                            <input type="hidden" value="Complete" name='ep2_state'>
+                            <input type="hidden" value="{{$today}}" name="ep2_date">
+                            <button type="submit" class="btn btn-sm text-success" data-toggle="tooltip" data-placement="top" title="Mark as complete"><i class="bx bx-check-square font-size-30"></i></button>
+                        </form>
+                        <form method="POST" class="float-left" id="pending" action="{{route('enquiry.update', ['enquiry' => $enquiry->id])}}">
+                            @csrf
+                            @method('PUT')
+                            <input type="hidden" value="Pending" name='ep2_state'>
+                            <input type="hidden" value="{{$today}}" name="ep2_date">
+                            <button type="submit" class="btn btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as Pending"><i class="bx bx-check-square font-size-30 "></i></button>
+                        </form>
                     </td>
                 </tr>
                 <tr  id="itemEnrolmentProcess-3" class="">
@@ -65,7 +91,20 @@
                     <td>
                         <!-- <a href="#" class="btn btn-sm text-primary" data-toggle="tooltip" data-placement="top" title="Send the enrollment form"><i class="bx bx-mail-send font-size-30" ></i></a>
                         <a href="#" class="btn btn-sm text-primary" data-toggle="tooltip" data-placement="top" title="fill out the enrollment form manually"><i class="bx bx-food-menu font-size-30" ></i></a> -->
-                        <a href="#" class="btn btn-sm text-success" data-toggle="tooltip" data-placement="top" title="Mark as complete"><i class="bx bx-check-square font-size-30"></i></a>
+                        <form method="POST" class="float-left" id="complete" action="{{route('enquiry.update', ['enquiry' => $enquiry->id])}}">
+                            @csrf
+                            @method('PUT')
+                            <input type="hidden" value="Complete" name='ep3_state'>
+                            <input type="hidden" value="{{$today}}" name="ep3_date">
+                            <button type="submit" class="btn btn-sm text-success" data-toggle="tooltip" data-placement="top" title="Mark as complete"><i class="bx bx-check-square font-size-30"></i></button>
+                        </form>
+                        <form method="POST" class="float-left" id="pending" action="{{route('enquiry.update', ['enquiry' => $enquiry->id])}}">
+                            @csrf
+                            @method('PUT')
+                            <input type="hidden" value="Pending" name='ep3_state'>
+                            <input type="hidden" value="{{$today}}" name="ep3_date">
+                            <button type="submit" class="btn btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as Pending"><i class="bx bx-check-square font-size-30 "></i></button>
+                        </form>
                     </td>
                 </tr>
                 <tr  id="itemEnrolmentProcess-4" class="">
@@ -84,7 +123,20 @@
                     <td>
                         <!-- <a href="#" class="btn btn-sm text-primary" data-toggle="tooltip" data-placement="top" title="Send the enrollment form"><i class="bx bx-mail-send font-size-30" ></i></a> -->
                         <!-- <a href="#" class="btn btn-sm text-primary" data-toggle="tooltip" data-placement="top" title="fill out the enrollment form manually"><i class="bx bx-food-menu font-size-30" ></i></a> -->
-                        <a href="#" class="btn btn-sm text-success" data-toggle="tooltip" data-placement="top" title="Mark as complete"><i class="bx bx-check-square font-size-30"></i></a>
+                        <form method="POST" class="float-left" id="complete" action="{{route('enquiry.update', ['enquiry' => $enquiry->id])}}">
+                            @csrf
+                            @method('PUT')
+                            <input type="hidden" value="Complete" name='ep4_state'>
+                            <input type="hidden" value="{{$today}}" name="ep4_date">
+                            <button type="submit" class="btn btn-sm text-success" data-toggle="tooltip" data-placement="top" title="Mark as complete"><i class="bx bx-check-square font-size-30"></i></button>
+                        </form>
+                        <form method="POST" class="float-left" id="pending" action="{{route('enquiry.update', ['enquiry' => $enquiry->id])}}">
+                            @csrf
+                            @method('PUT')
+                            <input type="hidden" value="Pending" name='ep4_state'>
+                            <input type="hidden" value="{{$today}}" name="ep4_date">
+                            <button type="submit" class="btn btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as Pending"><i class="bx bx-check-square font-size-30 "></i></button>
+                        </form>
                     </td>
                 </tr>
                 <tr  id="itemEnrolmentProcess-5" class="">
@@ -101,9 +153,24 @@
                         <span class="badge badge-pill badge-soft-danger font-size-11 text-center" id="statusEnrolmentProcess-5">{{$enquiry->ep5_state}}</span>
                     </td>
                     <td>
-                        <a href="#" class="btn btn-sm text-primary" data-toggle="tooltip" data-placement="top" title="Send the enrollment form"><i class="bx bx-mail-send font-size-30" ></i></a>
-                        <a href="#" class="btn btn-sm text-primary" data-toggle="tooltip" data-placement="top" title="fill out the enrollment form manually"><i class="bx bx-food-menu font-size-30" ></i></a>
-                        <a href="#" class="btn btn-sm text-success" data-toggle="tooltip" data-placement="top" title="Mark as complete"><i class="bx bx-check-square font-size-30"></i></a>
+                        <form method="GET" class="float-left"  action="{{route('enrolment.create', ['enquiry' => $enquiry->id])}}">
+                            @csrf
+                            <button type="submit" class="btn btn-sm text-primary" data-toggle="tooltip" data-placement="top" title="Fill in the enrolment form manually"><i class="bx bx-mail-send font-size-30" ></i></button>
+                        </form>
+                        <form method="POST" class="float-left" id="complete" action="{{route('enquiry.update', ['enquiry' => $enquiry->id])}}">
+                            @csrf
+                            @method('PUT')
+                            <input type="hidden" value="Complete" name='ep5_state'>
+                            <input type="hidden" value="{{$today}}" name="ep5_date">
+                            <button type="submit" class="btn btn-sm text-success" data-toggle="tooltip" data-placement="top" title="Mark as complete"><i class="bx bx-check-square font-size-30"></i></button>
+                        </form>
+                        <form method="POST" class="float-left" id="pending" action="{{route('enquiry.update', ['enquiry' => $enquiry->id])}}">
+                            @csrf
+                            @method('PUT')
+                            <input type="hidden" value="Pending" name='ep5_state'>
+                            <input type="hidden" value="{{$today}}" name="ep5_date">
+                            <button type="submit" class="btn btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as Pending"><i class="bx bx-check-square font-size-30 "></i></button>
+                        </form>
                     </td>
                 </tr>
                 <tr  id="itemEnrolmentProcess-6" class="">
@@ -122,7 +189,20 @@
                     <td>
                         <!-- <a href="#" class="btn btn-sm text-primary" data-toggle="tooltip" data-placement="top" title="Send the enrollment form"><i class="bx bx-mail-send font-size-30" ></i></a>
                         <a href="#" class="btn btn-sm text-primary" data-toggle="tooltip" data-placement="top" title="fill out the enrollment form manually"><i class="bx bx-food-menu font-size-30" ></i></a> -->
-                        <a href="#" class="btn btn-sm text-success" data-toggle="tooltip" data-placement="top" title="Mark as complete"><i class="bx bx-check-square font-size-30"></i></a>
+                        <form method="POST" class="float-left" id="complete" action="{{route('enquiry.update', ['enquiry' => $enquiry->id])}}">
+                            @csrf
+                            @method('PUT')
+                            <input type="hidden" value="Complete" name='ep6_state'>
+                            <input type="hidden" value="{{$today}}" name="ep6_date">
+                            <button type="submit" class="btn btn-sm text-success" data-toggle="tooltip" data-placement="top" title="Mark as complete"><i class="bx bx-check-square font-size-30"></i></button>
+                        </form>
+                        <form method="POST" class="float-left" id="pending" action="{{route('enquiry.update', ['enquiry' => $enquiry->id])}}">
+                            @csrf
+                            @method('PUT')
+                            <input type="hidden" value="Pending" name='ep6_state'>
+                            <input type="hidden" value="{{$today}}" name="ep6_date">
+                            <button type="submit" class="btn btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as Pending"><i class="bx bx-check-square font-size-30 "></i></button>
+                        </form>
                     </td>
                 </tr>
                 <tr  id="itemEnrolmentProcess-7" class="">
@@ -141,7 +221,20 @@
                     <td>
                         <!-- <a href="#" class="btn btn-sm text-primary" data-toggle="tooltip" data-placement="top" title="Send the enrollment form"><i class="bx bx-mail-send font-size-30" ></i></a>
                         <a href="#" class="btn btn-sm text-primary" data-toggle="tooltip" data-placement="top" title="fill out the enrollment form manually"><i class="bx bx-food-menu font-size-30" ></i></a> -->
-                        <a href="#" class="btn btn-sm text-success" data-toggle="tooltip" data-placement="top" title="Mark as complete"><i class="bx bx-check-square font-size-30"></i></a>
+                        <form method="POST" class="float-left" id="complete" action="{{route('enquiry.update', ['enquiry' => $enquiry->id])}}">
+                            @csrf
+                            @method('PUT')
+                            <input type="hidden" value="Complete" name='ep7_state'>
+                            <input type="hidden" value="{{$today}}" name="ep7_date">
+                            <button type="submit" class="btn btn-sm text-success" data-toggle="tooltip" data-placement="top" title="Mark as complete"><i class="bx bx-check-square font-size-30"></i></button>
+                        </form>
+                        <form method="POST" class="float-left" id="pending" action="{{route('enquiry.update', ['enquiry' => $enquiry->id])}}">
+                            @csrf
+                            @method('PUT')
+                            <input type="hidden" value="Pending" name='ep7_state'>
+                            <input type="hidden" value="{{$today}}" name="ep7_date">
+                            <button type="submit" class="btn btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as Pending"><i class="bx bx-check-square font-size-30 "></i></button>
+                        </form>
                     </td>
                 </tr>
                 <tr  id="itemEnrolmentProcess-8" class="">
@@ -160,7 +253,20 @@
                     <td>
                         <!-- <a href="#" class="btn btn-sm text-primary" data-toggle="tooltip" data-placement="top" title="Send the enrollment form"><i class="bx bx-mail-send font-size-30" ></i></a>
                         <a href="#" class="btn btn-sm text-primary" data-toggle="tooltip" data-placement="top" title="fill out the enrollment form manually"><i class="bx bx-food-menu font-size-30" ></i></a> -->
-                        <a href="#" class="btn btn-sm text-success" data-toggle="tooltip" data-placement="top" title="Mark as complete"><i class="bx bx-check-square font-size-30"></i></a>
+                        <form method="POST" class="float-left" id="complete" action="{{route('enquiry.update', ['enquiry' => $enquiry->id])}}">
+                            @csrf
+                            @method('PUT')
+                            <input type="hidden" value="Complete" name='ep8_state'>
+                            <input type="hidden" value="{{$today}}" name="ep8_date">
+                            <button type="submit" class="btn btn-sm text-success" data-toggle="tooltip" data-placement="top" title="Mark as complete"><i class="bx bx-check-square font-size-30"></i></button>
+                        </form>
+                        <form method="POST" class="float-left" id="pending" action="{{route('enquiry.update', ['enquiry' => $enquiry->id])}}">
+                            @csrf
+                            @method('PUT')
+                            <input type="hidden" value="Pending" name='ep8_state'>
+                            <input type="hidden" value="{{$today}}" name="ep8_date">
+                            <button type="submit" class="btn btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as Pending"><i class="bx bx-check-square font-size-30 "></i></button>
+                        </form>
                     </td>
                 </tr>
                 <tr  id="itemEnrolmentProcess-9" class="">
@@ -179,7 +285,20 @@
                     <td>
                         <!-- <a href="#" class="btn btn-sm text-primary" data-toggle="tooltip" data-placement="top" title="Send the enrollment form"><i class="bx bx-mail-send font-size-30" ></i></a>
                         <a href="#" class="btn btn-sm text-primary" data-toggle="tooltip" data-placement="top" title="fill out the enrollment form manually"><i class="bx bx-food-menu font-size-30" ></i></a> -->
-                        <a href="#" class="btn btn-sm text-success" data-toggle="tooltip" data-placement="top" title="Mark as complete"><i class="bx bx-check-square font-size-30"></i></a>
+                        <form method="POST" class="float-left" id="complete" action="{{route('enquiry.update', ['enquiry' => $enquiry->id])}}">
+                            @csrf
+                            @method('PUT')
+                            <input type="hidden" value="Complete" name='ep9_state'>
+                            <input type="hidden" value="{{$today}}" name="ep9_date">
+                            <button type="submit" class="btn btn-sm text-success" data-toggle="tooltip" data-placement="top" title="Mark as complete"><i class="bx bx-check-square font-size-30"></i></button>
+                        </form>
+                        <form method="POST" class="float-left" id="pending" action="{{route('enquiry.update', ['enquiry' => $enquiry->id])}}">
+                            @csrf
+                            @method('PUT')
+                            <input type="hidden" value="Pending" name='ep9_state'>
+                            <input type="hidden" value="{{$today}}" name="ep9_date">
+                            <button type="submit" class="btn btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as Pending"><i class="bx bx-check-square font-size-30 "></i></button>
+                        </form>
                     </td>
                 </tr>
                 <tr  id="itemEnrolmentProcess-10" class="">
@@ -198,7 +317,20 @@
                     <td>
                         <!-- <a href="#" class="btn btn-sm text-primary" data-toggle="tooltip" data-placement="top" title="Send the enrollment form"><i class="bx bx-mail-send font-size-30" ></i></a>
                         <a href="#" class="btn btn-sm text-primary" data-toggle="tooltip" data-placement="top" title="fill out the enrollment form manually"><i class="bx bx-food-menu font-size-30" ></i></a> -->
-                        <a href="#" class="btn btn-sm text-success" data-toggle="tooltip" data-placement="top" title="Mark as complete"><i class="bx bx-check-square font-size-30"></i></a>
+                        <form method="POST" class="float-left" id="complete" action="{{route('enquiry.update', ['enquiry' => $enquiry->id])}}">
+                            @csrf
+                            @method('PUT')
+                            <input type="hidden" value="Complete" name='ep10_state'>
+                            <input type="hidden" value="{{$today}}" name="ep10_date">
+                            <button type="submit" class="btn btn-sm text-success" data-toggle="tooltip" data-placement="top" title="Mark as complete"><i class="bx bx-check-square font-size-30"></i></button>
+                        </form>
+                        <form method="POST" class="float-left" id="pending" action="{{route('enquiry.update', ['enquiry' => $enquiry->id])}}">
+                            @csrf
+                            @method('PUT')
+                            <input type="hidden" value="Pending" name='ep10_state'>
+                            <input type="hidden" value="{{$today}}" name="ep10_date">
+                            <button type="submit" class="btn btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as Pending"><i class="bx bx-check-square font-size-30 "></i></button>
+                        </form>
                     </td>
                 </tr>
                 <tr  id="itemEnrolmentProcess-11" class="">
@@ -217,7 +349,20 @@
                     <td>
                         <!-- <a href="#" class="btn btn-sm text-primary" data-toggle="tooltip" data-placement="top" title="Send the enrollment form"><i class="bx bx-mail-send font-size-30" ></i></a>
                         <a href="#" class="btn btn-sm text-primary" data-toggle="tooltip" data-placement="top" title="fill out the enrollment form manually"><i class="bx bx-food-menu font-size-30" ></i></a> -->
-                        <a href="#" class="btn btn-sm text-success" data-toggle="tooltip" data-placement="top" title="Mark as complete"><i class="bx bx-check-square font-size-30"></i></a>
+                        <form method="POST" class="float-left" id="complete" action="{{route('enquiry.update', ['enquiry' => $enquiry->id])}}">
+                            @csrf
+                            @method('PUT')
+                            <input type="hidden" value="Complete" name='ep11_state'>
+                            <input type="hidden" value="{{$today}}" name="ep11_date">
+                            <button type="submit" class="btn btn-sm text-success" data-toggle="tooltip" data-placement="top" title="Mark as complete"><i class="bx bx-check-square font-size-30"></i></button>
+                        </form>
+                        <form method="POST" class="float-left" id="pending" action="{{route('enquiry.update', ['enquiry' => $enquiry->id])}}">
+                            @csrf
+                            @method('PUT')
+                            <input type="hidden" value="Pending" name='ep11_state'>
+                            <input type="hidden" value="{{$today}}" name="ep11_date">
+                            <button type="submit" class="btn btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as Pending"><i class="bx bx-check-square font-size-30 "></i></button>
+                        </form>
                     </td>
                 </tr>
                 <tr  id="itemEnrolmentProcess-12" class="">
@@ -236,7 +381,20 @@
                     <td>
                         <!-- <a href="#" class="btn btn-sm text-primary" data-toggle="tooltip" data-placement="top" title="Send the enrollment form"><i class="bx bx-mail-send font-size-30" ></i></a>
                         <a href="#" class="btn btn-sm text-primary" data-toggle="tooltip" data-placement="top" title="fill out the enrollment form manually"><i class="bx bx-food-menu font-size-30" ></i></a> -->
-                        <a href="#" class="btn btn-sm text-success" data-toggle="tooltip" data-placement="top" title="Mark as complete"><i class="bx bx-check-square font-size-30"></i></a>
+                        <form method="POST" class="float-left" id="complete" action="{{route('enquiry.update', ['enquiry' => $enquiry->id])}}">
+                            @csrf
+                            @method('PUT')
+                            <input type="hidden" value="Complete" name='ep12_state'>
+                            <input type="hidden" value="{{$today}}" name="ep12_date">
+                            <button type="submit" class="btn btn-sm text-success" data-toggle="tooltip" data-placement="top" title="Mark as complete"><i class="bx bx-check-square font-size-30"></i></button>
+                        </form>
+                        <form method="POST" class="float-left" id="pending" action="{{route('enquiry.update', ['enquiry' => $enquiry->id])}}">
+                            @csrf
+                            @method('PUT')
+                            <input type="hidden" value="Pending" name='ep12_state'>
+                            <input type="hidden" value="{{$today}}" name="ep12_date">
+                            <button type="submit" class="btn btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as Pending"><i class="bx bx-check-square font-size-30 "></i></button>
+                        </form>
                     </td>
                 </tr>
                 <tr  id="itemEnrolmentProcess-13" class="">
@@ -255,7 +413,20 @@
                     <td>
                         <!-- <a href="#" class="btn btn-sm text-primary" data-toggle="tooltip" data-placement="top" title="Send the enrollment form"><i class="bx bx-mail-send font-size-30" ></i></a>
                         <a href="#" class="btn btn-sm text-primary" data-toggle="tooltip" data-placement="top" title="fill out the enrollment form manually"><i class="bx bx-food-menu font-size-30" ></i></a> -->
-                        <a href="#" class="btn btn-sm text-success" data-toggle="tooltip" data-placement="top" title="Mark as complete"><i class="bx bx-check-square font-size-30"></i></a>
+                        <form method="POST" class="float-left" id="complete" action="{{route('enquiry.update', ['enquiry' => $enquiry->id])}}">
+                            @csrf
+                            @method('PUT')
+                            <input type="hidden" value="Complete" name='ep13_state'>
+                            <input type="hidden" value="{{$today}}" name="ep13_date">
+                            <button type="submit" class="btn btn-sm text-success" data-toggle="tooltip" data-placement="top" title="Mark as complete"><i class="bx bx-check-square font-size-30"></i></button>
+                        </form>
+                        <form method="POST" class="float-left" id="pending" action="{{route('enquiry.update', ['enquiry' => $enquiry->id])}}">
+                            @csrf
+                            @method('PUT')
+                            <input type="hidden" value="Pending" name='ep13_state'>
+                            <input type="hidden" value="{{$today}}" name="ep13_date">
+                            <button type="submit" class="btn btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as Pending"><i class="bx bx-check-square font-size-30 "></i></button>
+                        </form>
                     </td>
                 </tr>
                 <tr  id="itemEnrolmentProcess-14" class="">
@@ -274,7 +445,20 @@
                     <td>
                         <!-- <a href="#" class="btn btn-sm text-primary" data-toggle="tooltip" data-placement="top" title="Send the enrollment form"><i class="bx bx-mail-send font-size-30" ></i></a>
                         <a href="#" class="btn btn-sm text-primary" data-toggle="tooltip" data-placement="top" title="fill out the enrollment form manually"><i class="bx bx-food-menu font-size-30" ></i></a> -->
-                        <a href="#" class="btn btn-sm text-success" data-toggle="tooltip" data-placement="top" title="Mark as complete"><i class="bx bx-check-square font-size-30"></i></a>
+                        <form method="POST" class="float-left" id="complete" action="{{route('enquiry.update', ['enquiry' => $enquiry->id])}}">
+                            @csrf
+                            @method('PUT')
+                            <input type="hidden" value="Complete" name='ep14_state'>
+                            <input type="hidden" value="{{$today}}" name="ep14_date">
+                            <button type="submit" class="btn btn-sm text-success" data-toggle="tooltip" data-placement="top" title="Mark as complete"><i class="bx bx-check-square font-size-30"></i></button>
+                        </form>
+                        <form method="POST" class="float-left" id="pending" action="{{route('enquiry.update', ['enquiry' => $enquiry->id])}}">
+                            @csrf
+                            @method('PUT')
+                            <input type="hidden" value="Pending" name='ep14_state'>
+                            <input type="hidden" value="{{$today}}" name="ep14_date">
+                            <button type="submit" class="btn btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as Pending"><i class="bx bx-check-square font-size-30 "></i></button>
+                        </form>
                     </td>
                 </tr>
                 
@@ -282,4 +466,5 @@
         </table>
     </div>
 </div>
+
 

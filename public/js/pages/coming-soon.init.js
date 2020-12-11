@@ -117,7 +117,7 @@ $('[data-countdown]').each(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/michael/Sites/Qovex/resources/js/pages/coming-soon.init.js */"./resources/js/pages/coming-soon.init.js");
+module.exports = __webpack_require__(/*! /Users/michael/Sites/educate/resources/js/pages/coming-soon.init.js */"./resources/js/pages/coming-soon.init.js");
 
 
 /***/ })

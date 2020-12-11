@@ -698,8 +698,8 @@
     array (
       'provided' => 
       array (
-        0 => '1.0',
-        1 => '1.0.0',
+        0 => '1.0.0',
+        1 => '1.0',
       ),
     ),
     'psr/simple-cache' => 
@@ -870,6 +870,15 @@
       array (
       ),
       'reference' => '99732be0ddb3361e16ad77b68ba41efc8e979019',
+    ),
+    'select2/select2' => 
+    array (
+      'pretty_version' => '4.0.13',
+      'version' => '4.0.13.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '45f2b83ceed5231afa7b3d5b12b58ad335edd82e',
     ),
     'swiftmailer/swiftmailer' => 
     array (
@@ -1127,6 +1136,15 @@
       array (
       ),
       'reference' => 'ab2cb0b3b559010b75981b1bdce728da3ee90ad6',
+    ),
+    'yoeunes/toastr' => 
+    array (
+      'pretty_version' => 'v1.2.5',
+      'version' => '1.2.5.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '49bf0e8ade88a1ab4865c01a840ab782d6710719',
     ),
   ),
 );

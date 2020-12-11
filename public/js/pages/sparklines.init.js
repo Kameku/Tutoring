@@ -106,7 +106,7 @@ $(document).ready(function () {
       type: 'pie',
       height: '200',
       resize: true,
-      sliceColors: ['#45cb85', '#db4b1a', '#e9ecef']
+      sliceColors: ['#45cb85', '#366db1', '#e9ecef']
     });
     $("#sparkline2").sparkline([5, 6, 2, 8, 9, 4, 7, 10, 11, 12, 10, 4, 7, 10], {
       type: 'bar',
@@ -126,7 +126,7 @@ $(document).ready(function () {
     $('#sparkline3').sparkline([5, 6, 2, 9, 4, 7, 10, 12, 4, 7, 10], {
       type: 'line',
       height: '200',
-      lineColor: '#db4b1a',
+      lineColor: '#366db1',
       fillColor: 'transparent',
       composite: true,
       lineWidth: 2,
@@ -152,7 +152,7 @@ $(document).ready(function () {
       height: '200',
       chartRangeMax: 50,
       resize: true,
-      lineColor: '#db4b1a',
+      lineColor: '#366db1',
       fillColor: 'rgba(59, 93, 231, 0.3)',
       highlightLineColor: 'rgba(108, 120, 151, 0.1)',
       highlightSpotColor: 'rgba(108, 120, 151, 0.2)'
@@ -197,7 +197,7 @@ $(document).ready(function () {
       height: '80',
       width: '100%',
       type: 'tristate',
-      posBarColor: '#db4b1a',
+      posBarColor: '#366db1',
       negBarColor: '#45cb85',
       zeroBarColor: '#ff715b',
       barWidth: 8,
@@ -223,7 +223,7 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/michael/Sites/Qovex/resources/js/pages/sparklines.init.js */"./resources/js/pages/sparklines.init.js");
+module.exports = __webpack_require__(/*! /Users/michael/Sites/educate/resources/js/pages/sparklines.init.js */"./resources/js/pages/sparklines.init.js");
 
 
 /***/ })

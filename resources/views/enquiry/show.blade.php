@@ -30,13 +30,13 @@
                     <!-- Nav tabs -->
                     <ul class="nav nav-pills nav-justified" role="tablist">
                         <li class="nav-item waves-effect waves-light">
-                            <a class="nav-link" data-toggle="tab" href="#enrolmentProcess" role="tab" aria-selected="false">
+                            <a class="nav-link active" data-toggle="tab" href="#enrolmentProcess" role="tab" aria-selected="false">
                                 <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
                                 <span class="d-none d-sm-block">Enrolment Process</span>
                             </a>
                         </li>
                         <li class="nav-item waves-effect waves-light">
-                            <a class="nav-link active" data-toggle="tab" href="#enrolmentDetails" role="tab" aria-selected="false">
+                            <a class="nav-link" data-toggle="tab" href="#enrolmentDetails" role="tab" aria-selected="false">
                                 <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
                                 <span class="d-none d-sm-block">Enrolment Details</span>
                             </a>
@@ -57,10 +57,10 @@
                 </div>
                 <!-- Tab panes -->
                 <div class="tab-content p-3 text-muted">       
-                    <div class="tab-pane" id="enrolmentProcess" role="tabpanel">
+                    <div class="tab-pane active" id="enrolmentProcess" role="tabpanel">
                         @include('enquiry.enrolmentProcess')
                     </div>
-                    <div class="tab-pane active" id="enrolmentDetails" role="tabpanel">
+                    <div class="tab-pane" id="enrolmentDetails" role="tabpanel">
                         <div class="row">
                             <div class="col-7">
                                 <div class="card-body bg-tramaSecond border border-primary shadow rounded">
@@ -141,7 +141,9 @@
                                         <a href="#" data-toggle="modal" data-target="#enquiryParentEdit" class="btn btn-primary">Edit Information Parent</a>
                                     </div>
                                 </div>
+                                <a href="/enquiry/enrolmentDetails" class="btn btn-danger mt-3">Enrolment Details</a>
                             </div>
+                            
                         </div>
                     </div>
                     <div class="tab-pane" id="reports" role="tabpanel">

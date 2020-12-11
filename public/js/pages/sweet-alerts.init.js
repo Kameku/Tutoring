@@ -111,7 +111,7 @@ File: Sweet alerts
     $('#sa-basic').on('click', function () {
       Swal.fire({
         title: 'Any fool can use a computer',
-        confirmButtonColor: '#db4b1a'
+        confirmButtonColor: '#366db1'
       });
     }); //A title with a text under
 
@@ -120,7 +120,7 @@ File: Sweet alerts
         title: "The Internet?",
         text: 'That thing is still around?',
         type: 'question',
-        confirmButtonColor: '#db4b1a'
+        confirmButtonColor: '#366db1'
       });
     }); //Success Message
 
@@ -130,7 +130,7 @@ File: Sweet alerts
         text: 'You clicked the button!',
         type: 'success',
         showCancelButton: true,
-        confirmButtonColor: '#db4b1a',
+        confirmButtonColor: '#366db1',
         cancelButtonColor: "#f46a6a"
       });
     }); //Warning Message
@@ -186,7 +186,7 @@ File: Sweet alerts
         text: 'Modal with a custom image.',
         imageUrl: 'assets/images/logo-dark.png',
         imageHeight: 20,
-        confirmButtonColor: "#db4b1a",
+        confirmButtonColor: "#366db1",
         animation: false
       });
     }); //Auto Close Timer
@@ -245,7 +245,7 @@ File: Sweet alerts
         title: 'Custom width, padding, background.',
         width: 600,
         padding: 100,
-        confirmButtonColor: "#db4b1a",
+        confirmButtonColor: "#366db1",
         background: '#fff url(//subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/geometry.png)'
       });
     }); //Ajax
@@ -257,7 +257,7 @@ File: Sweet alerts
         showCancelButton: true,
         confirmButtonText: 'Submit',
         showLoaderOnConfirm: true,
-        confirmButtonColor: "#db4b1a",
+        confirmButtonColor: "#366db1",
         cancelButtonColor: "#f46a6a",
         preConfirm: function preConfirm(email) {
           return new Promise(function (resolve, reject) {
@@ -285,7 +285,7 @@ File: Sweet alerts
         input: 'text',
         confirmButtonText: 'Next &rarr;',
         showCancelButton: true,
-        confirmButtonColor: "#db4b1a",
+        confirmButtonColor: "#366db1",
         cancelButtonColor: "#74788d",
         progressSteps: ['1', '2', '3']
       }).queue([{
@@ -305,7 +305,7 @@ File: Sweet alerts
     $('#dynamic-alert').click(function () {
       swal.queue([{
         title: 'Your public IP',
-        confirmButtonColor: "#db4b1a",
+        confirmButtonColor: "#366db1",
         confirmButtonText: 'Show my public IP',
         text: 'Your public IP will be received ' + 'via AJAX request',
         showLoaderOnConfirm: true,
@@ -337,7 +337,7 @@ function ($) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/michael/Sites/Qovex/resources/js/pages/sweet-alerts.init.js */"./resources/js/pages/sweet-alerts.init.js");
+module.exports = __webpack_require__(/*! /Users/michael/Sites/educate/resources/js/pages/sweet-alerts.init.js */"./resources/js/pages/sweet-alerts.init.js");
 
 
 /***/ })

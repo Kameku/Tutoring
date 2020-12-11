@@ -30,25 +30,35 @@
                     </a>
                 </li>
                 <li>
-                    <a href="events" class=" waves-effect">
+                    <a href="{{route('events.index')}}" class=" waves-effect">
                         <i class="mdi mdi-calendar-text"></i>
                         <span>Calendar</span>
                     </a>
                 </li>
                 <li>
-                    <a href="calendar" class=" waves-effect">
+                    <a href="#" class=" waves-effect">
                         <i class="mdi mdi-calendar-text"></i>
                         <span>Employees</span>
                     </a>
                 </li>
+                <li class="menu-title">Students</li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="mdi mdi-calendar-check"></i>
-                        <span>Students</span>
+                        <span>Enquiry</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{route('enquiry.index')}}"> List Enquiry</a></li>
-                        <li><a href="{{route('enquiry.create')}}">Create</a></li>
+                        <li><a href="{{route('enquiry.create')}}">Create Enquiry</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="mdi mdi-calendar-check"></i>
+                        <span>Enrolment</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{route('enquiry.index')}}"> List Enquiry</a></li>
                     </ul>
                 </li>
                 
@@ -58,8 +68,8 @@
                         <span>Tasks</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="tasks-list">Task List</a></li>
-                        <li><a href="tasks-create">Create Task</a></li>
+                        <li><a href="#">Task List</a></li>
+                        <li><a href="#">Create Task</a></li>
                     </ul>
                 </li>
                 <li class="menu-title">Turores</li>
@@ -69,8 +79,8 @@
                         <span>Calificaciones</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="tasks-list">Examen 1</a></li>
-                        <li><a href="tasks-create">Examen 2</a></li>
+                        <li><a href="#">Examen 1</a></li>
+                        <li><a href="#">Examen 2</a></li>
                     </ul>
                 </li>
                 <li>
@@ -79,10 +89,10 @@
                         <span>Library</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="tasks-list">Subjects</a></li>
-                        <li><a href="tasks-create">Concepts</a></li>
-                        <li><a href="tasks-create">Concepts Details</a></li>
-                        <li><a href="tasks-create">Learning Activities</a></li>
+                        <li><a href="#">Subjects</a></li>
+                        <li><a href="#">Concepts</a></li>
+                        <li><a href="#">Concepts Details</a></li>
+                        <li><a href="#">Learning Activities</a></li>
                     </ul>
                 </li>
             </ul>

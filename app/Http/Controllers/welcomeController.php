@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Enquiry;
 use Illuminate\Http\Request;
 
 class welcomeController extends Controller
@@ -15,4 +16,16 @@ class welcomeController extends Controller
     {
         return view('welcome');
     }
+    
+    public function enrolment()
+    {
+        
+        $enquirys = Enquiry::all();
+        return view('enquiry.enrolmentDetails')->with([
+            'enquirys' => $enquirys,
+        ]);
+        
+    }
+   
+    
 }

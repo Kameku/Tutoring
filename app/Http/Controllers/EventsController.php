@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 use App\event;
-use App\Enquiry;
 use Illuminate\Http\Request;
 
 class EventsController extends Controller
@@ -14,10 +13,8 @@ class EventsController extends Controller
      */
     public function index()
     {
-        $enquirys = Enquiry::all();
-        return view("events.index")->with([
-            'enquirys' => $enquirys,
-        ]);
+        //
+        return view("events.index");
     }
 
     /**
@@ -82,11 +79,8 @@ class EventsController extends Controller
     {
         //
         $datosEvento=request()->except(['_token','_method']);
-        
-        $resultado=event::where('id','=',$id)->update($datosEvento); 
-        // dd($datosEvento);      
+        $resultado=event::where('id','=',$id)->update($datosEvento);       
         return response()->json($resultado);
-        
 
     }
 

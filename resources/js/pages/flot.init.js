@@ -281,7 +281,7 @@ File: Flot chart
           var laptops = [[0, 80], [1, 100], [2,60], [3, 120], [4, 140], [5, 100], [6, 105]];
           var tablets = [[0, 20], [1, 80], [2, 70], [3, 140], [4, 250], [5, 80], [6, 200]];
           var plabels = ["Desktops","Laptops","Tablets"];
-          var pcolors = ['#eeb902', '#45cb85', '#db4b1a'];
+          var pcolors = ['#eeb902', '#45cb85', '#366db1'];
           var borderColor = 'rgba(166, 176, 207, 0.1)';
           var bgColor = 'transparent';
           this.createPlotGraph("#website-stats", desktops, laptops, tablets, plabels, pcolors, borderColor, bgColor);
@@ -289,7 +289,7 @@ File: Flot chart
           //Pie graph data
           var pielabels = ["Desktops","Laptops","Tablets"];
           var datas = [20,30, 15];
-          var colors = ['#db4b1a','#45cb85', "#ebeff2"];
+          var colors = ['#366db1','#45cb85', "#ebeff2"];
           this.createPieGraph("#pie-chart #pie-chart-container", pielabels , datas, colors);
 
 
@@ -308,7 +308,7 @@ File: Flot chart
             //Donut pie graph data
           var donutlabels = ["Desktops","Laptops","Tablets"];
           var donutdatas = [29,20, 18];
-          var donutcolors = ['#f0f1f4', '#db4b1a', '#45cb85'];
+          var donutcolors = ['#f0f1f4', '#366db1', '#45cb85'];
           this.createDonutGraph("#donut-chart #donut-chart-container", donutlabels , donutdatas, donutcolors);
         },
 

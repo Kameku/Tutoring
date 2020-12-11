@@ -183,16 +183,16 @@ File: Chartjs chart
         fill: true,
         lineTension: 0.5,
         backgroundColor: "rgba(59, 93, 231, 0.2)",
-        borderColor: "#db4b1a",
+        borderColor: "#366db1",
         borderCapStyle: 'butt',
         borderDash: [],
         borderDashOffset: 0.0,
         borderJoinStyle: 'miter',
-        pointBorderColor: "#db4b1a",
+        pointBorderColor: "#366db1",
         pointBackgroundColor: "#fff",
         pointBorderWidth: 1,
         pointHoverRadius: 5,
-        pointHoverBackgroundColor: "#db4b1a",
+        pointHoverBackgroundColor: "#366db1",
         pointHoverBorderColor: "#fff",
         pointHoverBorderWidth: 2,
         pointRadius: 1,
@@ -237,8 +237,8 @@ File: Chartjs chart
       labels: ["Desktops", "Tablets"],
       datasets: [{
         data: [300, 210],
-        backgroundColor: ["#db4b1a", "#ebeff2"],
-        hoverBackgroundColor: ["#db4b1a", "#ebeff2"],
+        backgroundColor: ["#366db1", "#ebeff2"],
+        hoverBackgroundColor: ["#366db1", "#ebeff2"],
         hoverBorderColor: "#fff"
       }]
     };
@@ -303,7 +303,7 @@ File: Chartjs chart
     var polarChart = {
       datasets: [{
         data: [11, 16, 7, 18],
-        backgroundColor: ["#ff715b", "#45cb85", "#eeb902", "#db4b1a"],
+        backgroundColor: ["#ff715b", "#45cb85", "#eeb902", "#366db1"],
         label: 'My dataset',
         // for legend
         hoverBorderColor: "#fff"
@@ -328,7 +328,7 @@ function ($) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/michael/Sites/Qovex/resources/js/pages/chartjs.init.js */"./resources/js/pages/chartjs.init.js");
+module.exports = __webpack_require__(/*! /Users/michael/Sites/educate/resources/js/pages/chartjs.init.js */"./resources/js/pages/chartjs.init.js");
 
 
 /***/ })

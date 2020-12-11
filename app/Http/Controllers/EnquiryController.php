@@ -3,19 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Enquiry;
+use App\Http\Requests\EnquiryRequest;
+use App\Mail\confirmationEnquiryMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class EnquiryController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct()
+    {
+        $this->middleware('auth')->except('create');
+    }
+
     public function index()
     {
         $enquirys = Enquiry::all();
-        // dd($enquirys); // Esta linea me permite inspeccionar el retorno de la variable
         return view('enquiry.index')->with([
             'enquirys' => $enquirys,
         ]);
@@ -38,14 +40,19 @@ class EnquiryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store(EnquiryRequest $request)
     {
-        $enquiry = Enquiry::create(request()->all());
+        Enquiry::create($request->all());
+        // Enquiry::create(request()->all());
         $enquirys = Enquiry::all();
-        return view('enquiry.index')->with([
-            'enquirys' => $enquirys,
-        ]);
+        $idLinkEnrolment = ($enquirys->last()->id);
+        $linkEnrolment = url('enrolment.create/'.$idLinkEnrolment);
+        $infoMsg = request()->all();
+        Mail::to(request()->parent_email)->queue(new confirmationEnquiryMail($infoMsg, $linkEnrolment));
+        return redirect()->route('welcome.index')
+            ->withSuccess('Your inquiry was generated correctly, an advisor will contact you soon, in your email we will send the enrollment link, so you can complete the registration');
     }
+    
 
     /**
      * Display the specified resource.
@@ -53,12 +60,12 @@ class EnquiryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($enquiry)
+    public function show(Enquiry $enquiry)
     {
-        $enquiry = Enquiry::findOrFail($enquiry);
-        
+        $today = date('Y-m-d'); //me genera la fecha actual
         return view('enquiry.show')->with([
             'enquiry' => $enquiry,
+            'today' => $today,// envio la fecha a la vista de show, paraa usarla en otros atibutos
         ]);
     }
 
@@ -68,11 +75,9 @@ class EnquiryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($enquiry)
+    public function edit(Enquiry $enquiry)
     {
-        $enquiry = Enquiry::findOrFail($enquiry);
-
-
+        //
     }
 
     /**
@@ -82,12 +87,10 @@ class EnquiryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update($enquiry)
+    public function update(Enquiry $enquiry)
     {
-        $enquiry = Enquiry::findOrFail($enquiry);
 
         $enquiry->update(request()->all());
-        // return redirect()->route('enquiry.show');
         return redirect()->back();
     }
 
@@ -97,10 +100,9 @@ class EnquiryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($enquiry)
+    public function destroy(Enquiry $enquiry)
     {   
-        
-        $enquiry = Enquiry::findOrFail($enquiry);
+
         $enquiry->delete(); 
         return redirect()->back();
        

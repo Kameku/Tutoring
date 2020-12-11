@@ -9,8 +9,8 @@ $sidebar-bg: #1e2938;
 $sidebar-menu-item-color: #7f879c;
 $sidebar-menu-sub-item-color: #7f879c;
 $sidebar-menu-item-icon-color: #7f879c;
-$sidebar-menu-item-hover-color: #db4b1a;
-$sidebar-menu-item-active-color: #db4b1a;
+$sidebar-menu-item-hover-color: #366db1;
+$sidebar-menu-item-active-color: #366db1;
 $sidebar-width:  250px;
 $sidebar-collapsed-width:  70px;
 $sidebar-width-sm:  180px;
@@ -31,7 +31,7 @@ $header-bg: rgba(#ffffff, 0.03);
 $header-item-color: #7f879c;
 
 // Topbar - Dark
-$header-dark-bg: #db4b1a;
+$header-dark-bg: #366db1;
 $header-dark-item-color: #e9ecef;
 
 // Topbar Search
@@ -108,7 +108,7 @@ $grays: map-merge(
 );
 
 
-$blue:    #db4b1a;
+$blue:    #366db1;
 $indigo:  #564ab1;
 $purple:  #6f42c1;
 $pink:    #e83e8c;

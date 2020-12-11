@@ -5,17 +5,32 @@
 @section('body')
 
 <body>
+    @if (session()->has('success'))
+    <div class="row mt-3 ml-2" >
+        <div class="col-4">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <i class="mdi mdi-check-all mr-2"></i> {{ session()->get('success')}}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    @endif
     @endsection
+    
 
     @section('content')
     <div class="home-btn d-none d-sm-block">
-        <a href="login" class="text-dark"><i class='bx bxs-layout h2' style="color:#db4b1a"></i></a>
+        <a href="login" class="text-dark"><i class='bx bxs-layout h2' style="color:#366db1"></i></a>
     </div>
     <section class="my-5 pt-sm-5">
         <div class="container">
             <div class="row">
+
                 <div class="col-12 text-center">
                     <div class="home-wrapper">
+
                         <div class="mb-5">
                             <img src="/images/site-icon.png" alt="logo" height="55" />
                         </div>
@@ -43,7 +58,7 @@
                                 <div class="card mt-4 maintenance-box">
                                     <div class="card-body">
                                         <h5 class="font-size-15 text-uppercase">
-                                        Catch up or get ahead</h5>
+                                            Catch up or get ahead</h5>
                                         <p class="text-muted mb-0">Finding it difficult to grasp foundation skills needed for reading, writing or maths</p>
                                     </div>
                                 </div>

@@ -25,7 +25,7 @@ var options = {
         endingShape: 'rounded'
         }
     },
-    colors: ['#db4b1a', '#EEB902'],
+    colors: ['#366db1', '#EEB902'],
     series: [{
         name: 'Complete Tasks',
         type: 'column',
