@@ -19,6 +19,8 @@ class CreateEventsTable extends Migration
             $table->text('descripcion');
             $table->string('color',255);
             $table->string('textColor',20);
+            $table->string('nameStudent', 100);
+            $table->string('nameTutor', 100);
             $table->dateTime('start');
             $table->dateTime('end');
             $table->timestamps();
